@@ -23,7 +23,7 @@ cf.go_offline()
 
 @st.cache
 def get_mydata():
-    data=pd.read_csv(r'C:\Users\UDESH SHARMA\Desktop\final\heart.csv')
+    data=pd.read_csv("heart.csv")
     return data
 
 @st.cache
@@ -76,7 +76,7 @@ with details:
     txtt.write("We’re cautioned every day to be aware of \nmany devastating diseases. But among the\nmost deadly is heart disease. \nHeart disease is the No. 1 killer of men \nand women in the whole world. It also is\namong the least understood, least researched\n,and least discussed chronic diseases.")
     txtt.write("Prediction of cardiovascular disease is \nregarded as one of the most important \nsubjects in the section of clinical data \nanalysis. The amount of data in the \nhealthcare industry is huge. Data mining \nturns the large collection of raw \nhealthcare data into information that can \nhelp to make informed decisions and \npredictions.Machine learning (ML) proves to\nbe effective in assisting in making \ndecisions and predictions from the large \nquantity of data produced by the healthcare\nindustry.")
     txtt.write("This makes heart disease a major concern to\nbe dealt with. But it is difficult to \nidentify heart disease because of several\ncontributory risk factors such as diabetes,\nhigh blood pressure, high cholesterol,\nabnormal pulse rate, and many other factors.\nDue to such constraints, scientists have\nturned towards modern approaches like\nData Mining and Machine Learning for\npredicting the disease.")
-    im=Image.open(r'C:\Users\UDESH SHARMA\Desktop\final\image1.jpeg')
+    im=Image.open("image1.jpeg")
     imgg.image(im, width=462)
     st.title("--------------------------------------")
 
@@ -92,7 +92,7 @@ with dataset:
     st.write(df.head(305))
     st.subheader("The dataset consists of 303 individuals data. There are 14 columns in the dataset,which are described below.")
     st.write('#')
-    img=Image.open(r'C:\Users\UDESH SHARMA\Desktop\final\image2.png')
+    img=Image.open("image2.png")
     st.image(img, width=653)
 
 
@@ -412,12 +412,12 @@ with predict:
             time.sleep(5)
         st.subheader('According to our Model')
         if resultofpd == 0:
-            happ=Image.open(r'C:\Users\UDESH SHARMA\Desktop\final\happy.jpg')
+            happ=Image.open("happy.jpg")
             st.image(happ, width=380)
             st.write("No You Don't have Heart Disease.Stay Safe")
 
         else:
-            sadd=Image.open(r'C:\Users\UDESH SHARMA\Desktop\final\sad.jpg')
+            sadd=Image.open("sad.jpg")
             st.image(sadd, width=380)
             st.write("Sorry, You are having Heart Disease.Stay Safe")
         st.title("--------------------------------------")
